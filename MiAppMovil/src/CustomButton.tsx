@@ -13,11 +13,10 @@ type CustomButtonProps = {
 }
 const styles = StyleSheet.create({
     button:{
-        borderColor: 'red',
         borderRadius: 6,
         backgroundColor: 'navy',
         padding: 12,
-        width: 150,
+        width: 158,
 
     },
    buttonText:{

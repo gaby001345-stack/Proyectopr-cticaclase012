@@ -10,12 +10,14 @@ export default function App() {
       <CustomButton 
       title={"App"} 
       onPress={()=>{
-        console.log("Press desde boton App")}}
+        console.log("Press desde boton App");
+        }}
         />
         <CustomButton 
       title={"Secondary Button"} 
       onPress={()=>{
-        console.log("Press desde boton Secundario")}}
+        console.log("Press desde boton Secundario");
+      }}
         />
     </View>
   );
