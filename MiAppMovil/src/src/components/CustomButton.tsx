@@ -17,12 +17,12 @@ const getstyles = (variant:  "primary" | "secondary" | "tertiary") => StyleSheet
         borderRadius: 6,
         //operador ternario
         backgroundColor: variant === "primary" ? 'navy' :
-                         variant === "secondary" ? 'gray' : 'green',
+                         variant === "secondary" ? 'gray' : "#fff",
         padding: 12,
         width: 150,
 
     },
    buttonText:{
-    color: '#fff'
+    color: variant === "tertiary" ? "#000" : "#fff"
    }
 })

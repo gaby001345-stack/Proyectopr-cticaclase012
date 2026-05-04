@@ -19,14 +19,21 @@ export default function App() {
         console.log("Press desde boton App");
         }
       }
-      variant={"primary"}
+      variant="primary"
         />
         <CustomButton 
       title={"Secondary Button"} 
       onPress={()=>{
         console.log("Press desde boton Secundario");
       }}
-      variant={"secondary"}
+      variant="secondary"
+        />
+        <CustomButton 
+      title={"Tertiary Button"} 
+      onPress={()=>{
+        console.log("Press desde boton Terciario");
+      }}
+      variant="tertiary"
         />
     </View>
   );
