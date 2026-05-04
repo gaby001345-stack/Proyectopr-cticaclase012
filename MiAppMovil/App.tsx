@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import CustomButton from "./src/src/components/CustomButton";
-import CustomInput from "./src/src/components/CustomInput";
+import CustomButton from "./src/components/CustomButton";
+import CustomInput from "./src/components/CustomInput";
 
 export default function App() {
   return (
