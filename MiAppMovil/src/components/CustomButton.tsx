@@ -1,28 +1,34 @@
-import { Text, TouchableOpacity, StyleSheet} from "react-native";
+import { Text, TouchableOpacity, StyleSheet } from "react-native";
 
 type CustomButtonProps = {
     title: string;
-    onPress: ()=> void;
-    variant: "primary" | "secondary" | "tertiary";
+    onPress: () => void;
+    //tipo: union de literales 
+    variant?: "primary" | "secondary" | "tertiary";
+    //tipo: literal
+    //variant: "primary"
+};
+
+export default function CustomButton({title, onPress, variant='primary'}: CustomButtonProps) {
+  const styles = getStyles(variant);
+    return (
+  <TouchableOpacity style={styles.button} onPress={onPress}>
+        <Text style={styles.buttonText} > {title} </Text>
+  </TouchableOpacity>);
 }
 
-export default function CustomButton ({title, onPress, variant}: CustomButtonProps){
-   const styles = getstyles(variant);
-    return(<TouchableOpacity style={styles.button} onPress={onPress}>
-        <Text style={styles.buttonText}> {title} </Text>
-    </TouchableOpacity>);
-}
-const getstyles = (variant:  "primary" | "secondary" | "tertiary") => StyleSheet.create({
+const getStyles = (variant: "primary" | "secondary" | "tertiary") =>
+    StyleSheet.create({
     button:{
         borderRadius: 6,
         //operador ternario
-        backgroundColor: variant === "primary" ? 'navy' :
-                         variant === "secondary" ? 'gray' : "#fff",
-        padding: 12,
+        backgroundColor: variant === "primary" ? 'navy' : 
+                            variant === "secondary" ? 'gray' : 
+                            "#fff ",
+        padding:12,
         width: 150,
-
     },
-   buttonText:{
-    color: variant === "tertiary" ? "#000" : "#fff"
-   }
+    buttonText:{
+        color: variant === "tertiary" ? "#0000" : "#fff"
+    }
 })
