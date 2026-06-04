@@ -1,5 +1,5 @@
 import { View, StyleSheet, ScrollView } from "react-native";
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "../context/ThemeContext";
 import { StatusBar } from "expo-status-bar";
 
 type ScreenWrapperProps = {
