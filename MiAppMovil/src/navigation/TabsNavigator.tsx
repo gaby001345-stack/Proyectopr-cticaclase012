@@ -5,7 +5,7 @@ import ProductsScreen from "../screens/ProductsScreen";
 import RoutinesScreen from "../screens/RoutinesScreen";
 import ProfileScreen from "../screens/UserSettings/ProfileScreen";
 import SettingsScreen from "../screens/UserSettings/SettingsScreen";
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "../context/ThemeContext";
 
 //1. declarar tipado para pantallas y sus parametros
 type TabsParamList = {
