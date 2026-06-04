@@ -3,17 +3,20 @@ import CustomInput from "../components/CustomInput";
 import CustomButton from "../components/CustomButton";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
+import { i18n } from "../context/LanguageContext";
+import ScreenWrapper from "../components/ScreenWrapper";
 
 export default function LoginScreen({navigation}:any) {
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState('mjsalinas@unitec.edu');
+    const [password, setPassword] = useState('');
 
-    const { login } = useAuth();
+    const {login} = useAuth();
 
     const handleLogin = () => {
         try{
             const allowed = login(email);
             if (allowed) {
-                navigation.navigate('Home', {email});
+                navigation.navigate('MainTabs');
             }else{
                 console.log('no tiene acceso');
             }
@@ -22,20 +25,20 @@ export default function LoginScreen({navigation}:any) {
         }
     }
 
-
     return(
-        <View>
+        <ScreenWrapper>
             <CustomInput placeholder={"Ingresa tu correo"} 
             value={email} 
             onChange={setEmail}/>
 
             <CustomInput type={"password"} 
             placeholder={"Ingresa tu contraseña"} 
-            value={email} 
-            onChange={setEmail}/>
+            value={password} 
+            onChange={setPassword}/>
             
-            <CustomButton title={"Iniciar Sesion"} 
+            <CustomButton title={i18n.t('signIn')} 
             onPress={handleLogin}/>
-        </View>
+        </ScreenWrapper>
+
     )
 }
