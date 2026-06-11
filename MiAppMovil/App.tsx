@@ -3,19 +3,20 @@ import StackNavigator from "./src/navigation/StackNavigator";
 import { navigationRef } from "./src/navigation/NavigationService";
 import { AuthProvider } from "./src/context/AuthContext";
 import { LanguageProvider } from "./src/context/LanguageContext";
-import { SkincareProvider } from "./src/context/SkincareContext";
 import { ThemeProvider } from "./src/context/ThemeContext";
+import { Provider } from "react-redux";
+import { store } from "./src/store";
 
 export default function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
         <AuthProvider>
-          <SkincareProvider>
-            <NavigationContainer ref={navigationRef}>
-              <StackNavigator />
-            </NavigationContainer>
-          </SkincareProvider>
+            <Provider store={store}>
+              <NavigationContainer ref={navigationRef}>
+                <StackNavigator />
+              </NavigationContainer>
+            </Provider>
         </AuthProvider>
       </LanguageProvider>
     </ThemeProvider>
