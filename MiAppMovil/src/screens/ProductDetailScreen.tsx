@@ -10,7 +10,7 @@ import TagChip from "../components/TagChip";
 import { useTheme } from "../context/ThemeContext";
 import { RootStackParamList } from "../navigation/StackNavigator";
 import { CATEGORY_LABELS, UsageTimeUnit } from "../utils/types/Skincare";
-import { useAppDispatch, useAppSelector } from "../store/Hooks";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { addReview, deleteProduct } from "../store/slices/skincareSlice";
 
 type Props = NativeStackScreenProps<RootStackParamList, "ProductDetail">;

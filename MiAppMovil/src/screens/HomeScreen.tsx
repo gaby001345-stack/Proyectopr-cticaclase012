@@ -9,7 +9,7 @@ import { useAuth } from "../context/AuthContext";
 import { useTheme } from "../context/ThemeContext";
 import { i18n } from "../context/LanguageContext";
 import { CATEGORY_LABELS } from "../utils/types/Skincare";
-import { useAppSelector } from "../store/Hooks";
+import { useAppSelector } from "../store/hooks";
 
 type RoutinePreviewProps = {
   title: string;

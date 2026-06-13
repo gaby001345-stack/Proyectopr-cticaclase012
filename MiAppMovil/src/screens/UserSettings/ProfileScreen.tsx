@@ -12,7 +12,7 @@ import {
   SKIN_TYPES,
   SKIN_TYPE_LABELS,
 } from "../../utils/types/Skincare";
-import { useAppDispatch, useAppSelector } from "../../store/Hooks";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { addMedicalCondition, addTreatment, removeMedicalCondition, removeTreatment, updateProfile } from "../../store/slices/userProfileSlice";
 
 export default function ProfileScreen() {

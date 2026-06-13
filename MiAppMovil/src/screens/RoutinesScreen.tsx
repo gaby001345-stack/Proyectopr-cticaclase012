@@ -4,7 +4,7 @@ import ScreenWrapper from "../components/ScreenWrapper";
 import SectionTitle from "../components/SectionTitle";
 import { useTheme } from "../context/ThemeContext";
 import { CATEGORY_LABELS } from "../utils/types/Skincare";
-import { useAppDispatch, useAppSelector } from "../store/Hooks";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { addToRoutine, removeFromRoutine } from "../store/slices/skincareSlice";
 
 type RoutineSectionProps = {
